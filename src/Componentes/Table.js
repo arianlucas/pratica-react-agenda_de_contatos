@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useAuth } from "../Global/useGlobal";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -8,64 +10,14 @@ import Paper from "@mui/material/Paper";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData(
-    "Claudia M. Sousa",
-    "claudia@teste.com.br",
-    "(99)9999-9999",
-    "",
-    <div>
-      <EditIcon />
-      <DeleteIcon />
-    </div>
-  ),
-  createData(
-    "Claudia M. Sousa",
-    "claudia@teste.com.br",
-    "(99)9999-9999",
-    "",
-    <div>
-      <EditIcon />
-      <DeleteIcon />
-    </div>
-  ),
-  createData(
-    "Claudia M. Sousa",
-    "claudia@teste.com.br",
-    "(99)9999-9999",
-    "",
-    <div>
-      <EditIcon />
-      <DeleteIcon />
-    </div>
-  ),
-  createData(
-    "Claudia M. Sousa",
-    "claudia@teste.com.br",
-    "(99)9999-9999",
-    "",
-    <div>
-      <EditIcon />
-      <DeleteIcon />
-    </div>
-  ),
-  createData(
-    "Claudia M. Sousa",
-    "claudia@teste.com.br",
-    "(99)9999-9999",
-    "",
-    <div>
-      <EditIcon />
-      <DeleteIcon />
-    </div>
-  ),
-];
-
 export default function BasicTable() {
+  const { contatos, carregarContatos, setModalDelete } = useAuth();
+
+  useEffect(() => {
+    carregarContatos();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <TableContainer component={Paper} sx={{ width: "60rem" }}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -79,18 +31,26 @@ export default function BasicTable() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {contatos.map((row) => (
             <TableRow
-              key={row.name}
+              key={row.id}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
               <TableCell component="th" scope="row">
-                {row.name}
+                {row.nome}
               </TableCell>
-              <TableCell>{row.calories}</TableCell>
-              <TableCell>{row.fat}</TableCell>
-              <TableCell>{row.carbs}</TableCell>
-              <TableCell>{row.protein}</TableCell>
+              <TableCell>{row.email}</TableCell>
+              <TableCell>{row.telefone}</TableCell>
+              <TableCell></TableCell>
+              <TableCell>
+                <div>
+                  <EditIcon sx={{ ":hover": { cursor: "pointer" } }} />
+                  <DeleteIcon
+                    onClick={() => setModalDelete(row)}
+                    sx={{ ":hover": { cursor: "pointer" } }}
+                  />
+                </div>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

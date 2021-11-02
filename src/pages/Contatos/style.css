@@ -1,0 +1,105 @@
+.modalAddEdit,
+.modal-delete {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Roboto";
+  font-style: normal;
+}
+
+.container-modal {
+  width: 29.75rem;
+  height: 35rem;
+
+  padding: 24px;
+
+  background: #fffdfd;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container-modaldelete {
+  width: 29.75rem;
+  height: 20rem;
+
+  padding: 24px;
+
+  background: #fffdfd;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.btn-fechar {
+  align-self: flex-end;
+  margin-bottom: 16px;
+}
+
+.btn-fechar:hover {
+  cursor: pointer;
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+
+  color: #000000;
+
+  margin-bottom: 40px;
+}
+
+.delete-title {
+  margin-bottom: 24px;
+}
+
+.inputs-modal {
+  all: unset;
+  width: 22.75rem;
+  height: 3rem;
+
+  background: #fdfafa;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+
+  padding: 16px;
+  text-align: left;
+  margin-bottom: 17px;
+}
+
+.inputs-modal::placeholder {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #968b8b;
+}
+
+.btn_modal {
+  all: unset;
+  box-sizing: border-box;
+  width: 22.75rem;
+  height: 3rem;
+
+  border-radius: 8px;
+}
+
+.error {
+  border: 1px solid #da6868;
+}
