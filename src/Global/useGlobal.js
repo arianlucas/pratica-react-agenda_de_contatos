@@ -11,6 +11,7 @@ export default function useGlobal() {
   const [token, setToken] = useState(null);
   const [contatos, setContatos] = useState([]);
   const [modalDelete, setModalDelete] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   async function carregarContatos() {
     try {
@@ -74,5 +75,7 @@ export default function useGlobal() {
     modalDelete,
     setModalDelete,
     handleDelete,
+    modalOpen,
+    setModalOpen,
   };
 }

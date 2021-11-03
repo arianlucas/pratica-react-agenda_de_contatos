@@ -8,7 +8,6 @@ import InputMask from "react-input-mask";
 import { useAuth } from "../../Global/useGlobal";
 
 export default function Contatos() {
-  const [modalOpen, setModalOpen] = useState(false);
   const [novoCont, setNovoCont] = useState({
     nome: "",
     email: "",
@@ -23,6 +22,8 @@ export default function Contatos() {
     modalDelete,
     setModalDelete,
     handleDelete,
+    modalOpen,
+    setModalOpen,
   } = useAuth();
 
   useEffect(() => {
@@ -30,6 +31,22 @@ export default function Contatos() {
       setVerificarVazio(false);
     }
   }, [novoCont.email, novoCont.nome, novoCont.telefone, setVerificarVazio]);
+
+  useEffect(() => {
+    if (modalOpen.nome) {
+      setNovoCont({
+        nome: modalOpen.nome,
+        email: modalOpen.email,
+        telefone: modalOpen.telefone,
+      });
+    } else {
+      setNovoCont({
+        nome: "",
+        email: "",
+        telefone: "",
+      });
+    }
+  }, [modalOpen.email, modalOpen.nome, modalOpen.telefone]);
 
   function handleValues({ target }) {
     setNovoCont({ ...novoCont, [target.name]: target.value });
@@ -82,17 +99,67 @@ export default function Contatos() {
     }
   }
 
+  async function handleEditContato() {
+    if (!novoCont.nome || !novoCont.email || !novoCont.telefone) {
+      setVerificarVazio("vazios");
+    }
+
+    const body = {
+      nome: novoCont.nome,
+      email: novoCont.email,
+      telefone: novoCont.telefone,
+    };
+
+    try {
+      const response = await fetch(
+        `https://cubos-api-contacts.herokuapp.com/contatos/${modalOpen.id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify(body),
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setExibAlert({ data, typealert: "error" });
+
+        setTimeout(() => {
+          setExibAlert(false);
+        }, 3000);
+      } else {
+        await carregarContatos();
+
+        setModalOpen(false);
+        setNovoCont({
+          nome: "",
+          email: "",
+          telefone: "",
+        });
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
   return (
     <div className="Contatos">
       <CustomNavbar />
-      <Button
-        variant="contained"
-        color="success"
-        onClick={() => setModalOpen(true)}
-      >
-        Adicionar
-      </Button>
-      <BasicTable />
+      <div className="body-contatos">
+        <Button
+          variant="contained"
+          color="success"
+          onClick={() => setModalOpen("add")}
+          sx={{ alignSelf: "flex-start", marginBottom: "2rem" }}
+        >
+          Adicionar
+        </Button>
+        <BasicTable />
+      </div>
 
       {modalOpen && (
         <div className="modalAddEdit">
@@ -104,7 +171,9 @@ export default function Contatos() {
               onClick={() => setModalOpen(false)}
             />
 
-            <h1 className="modal-title">Novo Contato</h1>
+            <h1 className="modal-title">
+              {modalOpen.nome ? "Editar Contato" : "Novo Contato"}
+            </h1>
 
             {verificarVazio === "vazios" && (
               <Typography variant="caption" gutterBottom>
@@ -147,17 +216,18 @@ export default function Contatos() {
                 marginBottom: 1,
                 marginTop: "55px",
               }}
-              onClick={handleAddContato}
+              onClick={modalOpen.nome ? handleEditContato : handleAddContato}
             >
-              Adicionar
+              {modalOpen.nome ? "Salvar" : "Adicionar"}
             </Button>
 
             <Button
+              onClick={() => setModalOpen(false)}
               variant="contained"
               color="error"
               className="btn_modal btn-limpar"
             >
-              Limpar
+              {modalOpen.nome ? "Cancelar" : "Limpar"}
             </Button>
           </div>
         </div>

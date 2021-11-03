@@ -89,6 +89,7 @@ export default function Cadastro() {
             variant="outlined"
             value={nomeCadastro}
             onChange={({ target }) => setNomeCadastro(target.value)}
+            sx={{ width: "30rem", marginBottom: "1rem" }}
           />
           <TextField
             error={verificarVazio === "email"}
@@ -100,6 +101,7 @@ export default function Cadastro() {
             variant="outlined"
             value={emailCadastro}
             onChange={({ target }) => setEmailCadastro(target.value)}
+            sx={{ width: "30rem", marginBottom: "1rem" }}
           />
           <TextField
             error={verificarVazio === "senha"}
@@ -112,11 +114,13 @@ export default function Cadastro() {
             variant="outlined"
             value={senhaCadastro}
             onChange={({ target }) => setSenhaCadastro(target.value)}
+            sx={{ width: "30rem", marginBottom: "4.5rem" }}
           />
           <Button
             className="login-btn"
             variant="contained"
             onClick={() => cadastrarUsuario()}
+            sx={{ width: "30rem", height: "3rem", marginBottom: "0.5rem" }}
           >
             Cadastrar
           </Button>
@@ -124,14 +128,15 @@ export default function Cadastro() {
             variant="contained"
             color="error"
             onClick={() => history.push("/")}
+            sx={{ width: "30rem", height: "3rem", marginBottom: "6rem" }}
           >
             Cancelar
           </Button>
-        </Box>
 
-        <Typography variant="body2" gutterBottom>
-          Já tem cadastro? <Link to="/">Clique aqui!</Link>
-        </Typography>
+          <Typography variant="body2" gutterBottom>
+            Já tem cadastro? <Link to="/">Clique aqui!</Link>
+          </Typography>
+        </Box>
       </div>
       <div className="right">
         <img src="./assets/imagem-direita.png" alt="Banner de Cadastro" />

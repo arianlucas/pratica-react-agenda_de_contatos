@@ -21,6 +21,7 @@ function App() {
             <Cadastro />
           </Route>
           <Route
+            path="/home"
             render={() =>
               valuesProv.token ? <Contatos /> : <Redirect to="/" exact />
             }

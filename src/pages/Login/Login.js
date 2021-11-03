@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { Link, useHistory } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAuth } from "../../Global/useGlobal";
 
 export default function Login() {
@@ -13,6 +13,12 @@ export default function Login() {
   const [senhaLogin, setSenhaLogin] = useState("");
   const { setExibAlert, verificarVazio, setVerificarVazio, setToken } =
     useAuth();
+
+  useEffect(() => {
+    if (emailLogin || senhaLogin) {
+      setVerificarVazio(false);
+    }
+  }, [emailLogin, senhaLogin, setVerificarVazio]);
 
   async function handleLogin() {
     if (!emailLogin) {
@@ -72,11 +78,19 @@ export default function Login() {
         <img src="./assets/imagem-esquerda.png" alt="Banner de Login" />
       </div>
       <div className="right">
-        <Box className="box-form">
-          <Typography variant="caption" gutterBottom>
+        <Box className="box-form_login">
+          <Typography
+            variant="caption"
+            gutterBottom
+            sx={{ alignSelf: "flex-start" }}
+          >
             Bem vindo
           </Typography>
-          <Typography variant="h5" className="title-login">
+          <Typography
+            variant="h5"
+            className="title-login"
+            sx={{ alignSelf: "flex-start" }}
+          >
             Faça o login com sua conta
           </Typography>
           <TextField
@@ -89,6 +103,7 @@ export default function Login() {
             variant="outlined"
             value={emailLogin}
             onChange={({ target }) => setEmailLogin(target.value)}
+            sx={{ width: "30rem", marginBottom: "1rem" }}
           />
           <TextField
             error={verificarVazio === "senha"}
@@ -101,19 +116,21 @@ export default function Login() {
             variant="outlined"
             value={senhaLogin}
             onChange={({ target }) => setSenhaLogin(target.value)}
+            sx={{ width: "30rem", marginBottom: "4.5rem" }}
           />
           <Button
             className="login-btn"
             variant="contained"
             onClick={handleLogin}
+            sx={{ width: "30rem", marginBottom: "6rem" }}
           >
             Login
           </Button>
-        </Box>
 
-        <Typography variant="body2" gutterBottom>
-          Não tem cadastro? <Link to="/sign-up">Clique aqui!</Link>
-        </Typography>
+          <Typography variant="body2" gutterBottom>
+            Não tem cadastro? <Link to="/sign-up">Clique aqui!</Link>
+          </Typography>
+        </Box>
       </div>
     </div>
   );

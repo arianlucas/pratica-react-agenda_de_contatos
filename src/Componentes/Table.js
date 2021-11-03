@@ -11,7 +11,8 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 export default function BasicTable() {
-  const { contatos, carregarContatos, setModalDelete } = useAuth();
+  const { contatos, carregarContatos, setModalDelete, setModalOpen } =
+    useAuth();
 
   useEffect(() => {
     carregarContatos();
@@ -19,7 +20,10 @@ export default function BasicTable() {
   }, []);
 
   return (
-    <TableContainer component={Paper} sx={{ width: "60rem" }}>
+    <TableContainer
+      component={Paper}
+      sx={{ width: "60rem", alignSelf: "flex-start", marginBottom: "2rem" }}
+    >
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
@@ -44,7 +48,10 @@ export default function BasicTable() {
               <TableCell></TableCell>
               <TableCell>
                 <div>
-                  <EditIcon sx={{ ":hover": { cursor: "pointer" } }} />
+                  <EditIcon
+                    onClick={() => setModalOpen(row)}
+                    sx={{ ":hover": { cursor: "pointer" } }}
+                  />
                   <DeleteIcon
                     onClick={() => setModalDelete(row)}
                     sx={{ ":hover": { cursor: "pointer" } }}
