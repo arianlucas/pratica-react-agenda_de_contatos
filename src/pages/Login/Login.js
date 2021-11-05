@@ -74,25 +74,23 @@ export default function Login() {
 
   return (
     <div className="Login">
-      <div className="left">
+      <div className="left left_login">
         <img src="./assets/imagem-esquerda.png" alt="Banner de Login" />
       </div>
-      <div className="right">
+      <div className="right right_login">
         <Box className="box-form_login">
-          <Typography
-            variant="caption"
-            gutterBottom
-            sx={{ alignSelf: "flex-start", fontSize: 16 }}
-          >
-            Bem vindo
-          </Typography>
-          <Typography
-            variant="h5"
-            className="title-login"
-            sx={{ alignSelf: "flex-start", fontSize: 32 }}
-          >
-            Faça o login com sua conta
-          </Typography>
+          <div className="box-titles">
+            <Typography variant="caption" gutterBottom sx={{ fontSize: 16 }}>
+              Bem vindo
+            </Typography>
+            <Typography
+              variant="h5"
+              className="title-login"
+              sx={{ fontSize: 32 }}
+            >
+              Faça o login com sua conta
+            </Typography>
+          </div>
           <TextField
             error={verificarVazio === "email"}
             helperText={
@@ -119,7 +117,7 @@ export default function Login() {
             sx={{ marginBottom: "4.5rem" }}
           />
           <Button
-            className="login-btn"
+            className="sucess-btn btn-action"
             variant="contained"
             onClick={handleLogin}
             sx={{

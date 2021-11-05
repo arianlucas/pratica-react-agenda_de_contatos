@@ -25,7 +25,7 @@ export default function CustomNavBar() {
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, fontSize: 24 }}
+            sx={{ flexGrow: 1, fontSize: "2.4rem" }}
           >
             KONTACTS
           </Typography>

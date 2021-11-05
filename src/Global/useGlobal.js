@@ -1,9 +1,6 @@
 import { useState, useContext } from "react";
 import UseContext from "../Contexto/UseContext";
-<<<<<<< HEAD
 import { useLocalStorage } from "react-use";
-=======
->>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
 
 export function useAuth() {
   return useContext(UseContext);
@@ -12,11 +9,7 @@ export function useAuth() {
 export default function useGlobal() {
   const [exibAlert, setExibAlert] = useState(false);
   const [verificarVazio, setVerificarVazio] = useState("");
-<<<<<<< HEAD
   const [token, setToken, removeToken] = useLocalStorage("tokenlogin", null);
-=======
-  const [token, setToken] = useState(null);
->>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
   const [contatos, setContatos] = useState([]);
   const [modalDelete, setModalDelete] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
@@ -77,10 +70,7 @@ export default function useGlobal() {
     setVerificarVazio,
     token,
     setToken,
-<<<<<<< HEAD
     removeToken,
-=======
->>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
     contatos,
     setContatos,
     carregarContatos,

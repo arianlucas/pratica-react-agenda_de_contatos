@@ -14,10 +14,7 @@
 .modalAddEdit,
 .modal-delete {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
 
   display: flex;
   justify-content: center;
@@ -49,7 +46,7 @@
 
 .btn-fechar {
   align-self: flex-end;
-  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
 }
 
 .btn-fechar:hover {
@@ -58,17 +55,17 @@
 
 .modal-title {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 2.4rem;
   line-height: 28px;
   text-align: center;
 
   color: #000000;
 
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 
 .delete-title {
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 
 .inputs-modal {
@@ -82,12 +79,12 @@
 
   padding: 16px;
   text-align: left;
-  margin-bottom: 17px;
+  margin-bottom: 1.7rem;
 }
 
 .inputs-modal::placeholder {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 19px;
 
   color: #968b8b;
@@ -103,7 +100,7 @@
 }
 
 button.btn_modal {
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 .error {

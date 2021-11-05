@@ -8,19 +8,53 @@
   text-align: center;
 }
 
+.Login,
+.Cadastro {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Roboto";
+  font-style: normal;
+}
+
+.left,
+.right {
+  width: 50%;
+  height: 100vh;
+}
+
+.right_login,
+.left_cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+  flex-direction: column;
+}
+
+button.sucess-btn {
+  background-color: #04c45c;
+}
+
 input.MuiOutlinedInput-input {
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 p.MuiFormHelperText-root {
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 div.outlined-basic {
-  width: 476px;
+  width: 47.6rem;
+}
+
+label.MuiInputLabel-root {
+  font-size: 1.6rem;
 }
 
 th.MuiTableCell-root,
 td.MuiTableCell-root {
-  font-size: 14px;
+  font-size: 1.4rem;
 }

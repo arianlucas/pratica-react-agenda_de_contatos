@@ -74,17 +74,13 @@ export default function Cadastro() {
 
   return (
     <div className="Cadastro">
-      <div className="left">
+      <div className="left left_cadastro">
         <Box className="box-form">
-<<<<<<< HEAD
           <Typography
             variant="h5"
             className="title-cadastro"
-            sx={{ fontSize: 24 }}
+            sx={{ fontSize: "2.4rem" }}
           >
-=======
-          <Typography variant="h5" className="title-cadastro">
->>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
             Cadastre-se
           </Typography>
           <TextField
@@ -125,52 +121,41 @@ export default function Cadastro() {
             sx={{ width: "30rem", marginBottom: "4.5rem" }}
           />
           <Button
-            className="login-btn"
+            className="sucess-btn btn-action"
             variant="contained"
             onClick={() => cadastrarUsuario()}
-<<<<<<< HEAD
             sx={{
               width: 475,
               minHeight: 50,
               marginBottom: "0.8rem",
-              fontSize: 16,
+              fontSize: "1.6rem",
               borderRadius: "0.8rem",
             }}
-=======
-            sx={{ width: "30rem", height: "3rem", marginBottom: "0.5rem" }}
->>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
           >
             Cadastrar
           </Button>
           <Button
+            className="btn-action"
             variant="contained"
             color="error"
             onClick={() => history.push("/")}
-<<<<<<< HEAD
             sx={{
               width: 475,
               minHeight: 50,
               marginBottom: "6rem",
-              fontSize: 16,
+              fontSize: "1.6rem",
               borderRadius: "0.8rem",
             }}
-=======
-            sx={{ width: "30rem", height: "3rem", marginBottom: "6rem" }}
->>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
           >
             Cancelar
           </Button>
 
-<<<<<<< HEAD
-          <Typography variant="body2" sx={{ fontSize: 16 }}>
-=======
-          <Typography variant="body2" gutterBottom>
->>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
+          <Typography variant="body2" sx={{ fontSize: "1.6rem" }}>
             Já tem cadastro? <Link to="/">Clique aqui!</Link>
           </Typography>
         </Box>
       </div>
-      <div className="right">
+      <div className="right right_cadastro">
         <img src="./assets/imagem-direita.png" alt="Banner de Cadastro" />
       </div>
     </div>
