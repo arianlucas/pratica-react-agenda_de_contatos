@@ -23,7 +23,7 @@ h5.title-cadastro {
   align-self: center;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 965px) {
   div.outlined-basic,
   button.btn-action {
     width: 80vw;
@@ -37,6 +37,16 @@ h5.title-cadastro {
   }
 
   .box-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .right_cadastro {
+    display: none;
+  }
+
+  .left_cadastro {
     width: 100%;
   }
 }
