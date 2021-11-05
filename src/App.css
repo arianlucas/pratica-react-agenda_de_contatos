@@ -7,3 +7,20 @@
 .App {
   text-align: center;
 }
+
+input.MuiOutlinedInput-input {
+  font-size: 16px;
+}
+
+p.MuiFormHelperText-root {
+  font-size: 16px;
+}
+
+div.outlined-basic {
+  width: 476px;
+}
+
+th.MuiTableCell-root,
+td.MuiTableCell-root {
+  font-size: 14px;
+}

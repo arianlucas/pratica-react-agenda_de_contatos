@@ -82,14 +82,14 @@ export default function Login() {
           <Typography
             variant="caption"
             gutterBottom
-            sx={{ alignSelf: "flex-start" }}
+            sx={{ alignSelf: "flex-start", fontSize: 16 }}
           >
             Bem vindo
           </Typography>
           <Typography
             variant="h5"
             className="title-login"
-            sx={{ alignSelf: "flex-start" }}
+            sx={{ alignSelf: "flex-start", fontSize: 32 }}
           >
             Faça o login com sua conta
           </Typography>
@@ -103,7 +103,7 @@ export default function Login() {
             variant="outlined"
             value={emailLogin}
             onChange={({ target }) => setEmailLogin(target.value)}
-            sx={{ width: "30rem", marginBottom: "1rem" }}
+            sx={{ marginBottom: "1rem" }}
           />
           <TextField
             error={verificarVazio === "senha"}
@@ -116,18 +116,24 @@ export default function Login() {
             variant="outlined"
             value={senhaLogin}
             onChange={({ target }) => setSenhaLogin(target.value)}
-            sx={{ width: "30rem", marginBottom: "4.5rem" }}
+            sx={{ marginBottom: "4.5rem" }}
           />
           <Button
             className="login-btn"
             variant="contained"
             onClick={handleLogin}
-            sx={{ width: "30rem", marginBottom: "6rem" }}
+            sx={{
+              width: 475,
+              minHeight: 50,
+              marginBottom: "6rem",
+              fontSize: 16,
+              borderRadius: "0.8rem",
+            }}
           >
             Login
           </Button>
 
-          <Typography variant="body2" gutterBottom>
+          <Typography variant="body2" sx={{ fontSize: 16 }}>
             Não tem cadastro? <Link to="/sign-up">Clique aqui!</Link>
           </Typography>
         </Box>

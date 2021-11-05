@@ -29,8 +29,8 @@
 }
 
 .container-modal {
-  width: 29.75rem;
-  height: 35rem;
+  width: 477px;
+  height: 563px;
 
   padding: 24px;
 
@@ -44,18 +44,7 @@
 }
 
 .container-modaldelete {
-  width: 29.75rem;
-  height: 20rem;
-
-  padding: 24px;
-
-  background: #fffdfd;
-  border-radius: 8px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  height: 319px;
 }
 
 .btn-fechar {
@@ -84,8 +73,8 @@
 
 .inputs-modal {
   all: unset;
-  width: 22.75rem;
-  height: 3rem;
+  width: 364px;
+  height: 50px;
 
   background: #fdfafa;
   border: 1px solid #e8e8e8;
@@ -107,10 +96,14 @@
 .btn_modal {
   all: unset;
   box-sizing: border-box;
-  width: 22.75rem;
-  height: 3rem;
+  width: 364px;
+  height: 50px;
 
   border-radius: 8px;
+}
+
+button.btn_modal {
+  font-size: 16px;
 }
 
 .error {

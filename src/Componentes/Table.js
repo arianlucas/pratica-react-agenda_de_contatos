@@ -22,7 +22,7 @@ export default function BasicTable() {
   return (
     <TableContainer
       component={Paper}
-      sx={{ width: "60rem", alignSelf: "flex-start", marginBottom: "2rem" }}
+      sx={{ width: 956, alignSelf: "flex-start", marginBottom: "2rem" }}
     >
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
@@ -50,11 +50,19 @@ export default function BasicTable() {
                 <div>
                   <EditIcon
                     onClick={() => setModalOpen(row)}
-                    sx={{ ":hover": { cursor: "pointer" } }}
+                    sx={{
+                      ":hover": { cursor: "pointer" },
+                      height: 20,
+                      width: 20,
+                    }}
                   />
                   <DeleteIcon
                     onClick={() => setModalDelete(row)}
-                    sx={{ ":hover": { cursor: "pointer" } }}
+                    sx={{
+                      ":hover": { cursor: "pointer" },
+                      height: 20,
+                      width: 20,
+                    }}
                   />
                 </div>
               </TableCell>
