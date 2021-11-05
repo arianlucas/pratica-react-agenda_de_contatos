@@ -82,14 +82,22 @@ export default function Login() {
           <Typography
             variant="caption"
             gutterBottom
+<<<<<<< HEAD
             sx={{ alignSelf: "flex-start", fontSize: 16 }}
+=======
+            sx={{ alignSelf: "flex-start" }}
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
           >
             Bem vindo
           </Typography>
           <Typography
             variant="h5"
             className="title-login"
+<<<<<<< HEAD
             sx={{ alignSelf: "flex-start", fontSize: 32 }}
+=======
+            sx={{ alignSelf: "flex-start" }}
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
           >
             Faça o login com sua conta
           </Typography>
@@ -103,7 +111,11 @@ export default function Login() {
             variant="outlined"
             value={emailLogin}
             onChange={({ target }) => setEmailLogin(target.value)}
+<<<<<<< HEAD
             sx={{ marginBottom: "1rem" }}
+=======
+            sx={{ width: "30rem", marginBottom: "1rem" }}
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
           />
           <TextField
             error={verificarVazio === "senha"}
@@ -116,12 +128,17 @@ export default function Login() {
             variant="outlined"
             value={senhaLogin}
             onChange={({ target }) => setSenhaLogin(target.value)}
+<<<<<<< HEAD
             sx={{ marginBottom: "4.5rem" }}
+=======
+            sx={{ width: "30rem", marginBottom: "4.5rem" }}
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
           />
           <Button
             className="login-btn"
             variant="contained"
             onClick={handleLogin}
+<<<<<<< HEAD
             sx={{
               width: 475,
               minHeight: 50,
@@ -129,11 +146,18 @@ export default function Login() {
               fontSize: 16,
               borderRadius: "0.8rem",
             }}
+=======
+            sx={{ width: "30rem", marginBottom: "6rem" }}
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
           >
             Login
           </Button>
 
+<<<<<<< HEAD
           <Typography variant="body2" sx={{ fontSize: 16 }}>
+=======
+          <Typography variant="body2" gutterBottom>
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
             Não tem cadastro? <Link to="/sign-up">Clique aqui!</Link>
           </Typography>
         </Box>

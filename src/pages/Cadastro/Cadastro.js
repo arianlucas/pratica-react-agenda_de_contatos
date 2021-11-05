@@ -76,11 +76,15 @@ export default function Cadastro() {
     <div className="Cadastro">
       <div className="left">
         <Box className="box-form">
+<<<<<<< HEAD
           <Typography
             variant="h5"
             className="title-cadastro"
             sx={{ fontSize: 24 }}
           >
+=======
+          <Typography variant="h5" className="title-cadastro">
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
             Cadastre-se
           </Typography>
           <TextField
@@ -124,6 +128,7 @@ export default function Cadastro() {
             className="login-btn"
             variant="contained"
             onClick={() => cadastrarUsuario()}
+<<<<<<< HEAD
             sx={{
               width: 475,
               minHeight: 50,
@@ -131,6 +136,9 @@ export default function Cadastro() {
               fontSize: 16,
               borderRadius: "0.8rem",
             }}
+=======
+            sx={{ width: "30rem", height: "3rem", marginBottom: "0.5rem" }}
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
           >
             Cadastrar
           </Button>
@@ -138,6 +146,7 @@ export default function Cadastro() {
             variant="contained"
             color="error"
             onClick={() => history.push("/")}
+<<<<<<< HEAD
             sx={{
               width: 475,
               minHeight: 50,
@@ -145,11 +154,18 @@ export default function Cadastro() {
               fontSize: 16,
               borderRadius: "0.8rem",
             }}
+=======
+            sx={{ width: "30rem", height: "3rem", marginBottom: "6rem" }}
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
           >
             Cancelar
           </Button>
 
+<<<<<<< HEAD
           <Typography variant="body2" sx={{ fontSize: 16 }}>
+=======
+          <Typography variant="body2" gutterBottom>
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
             Já tem cadastro? <Link to="/">Clique aqui!</Link>
           </Typography>
         </Box>

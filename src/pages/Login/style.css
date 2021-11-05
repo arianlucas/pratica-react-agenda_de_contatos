@@ -42,10 +42,13 @@ h5.title-login {
   margin-bottom: 32px;
 }
 
+<<<<<<< HEAD
 .outlined-basic label {
   font-size: 16px;
 }
 
+=======
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
 button.login-btn {
   background-color: #04c45c;
 }

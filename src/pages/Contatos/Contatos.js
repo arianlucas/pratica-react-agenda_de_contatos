@@ -154,6 +154,7 @@ export default function Contatos() {
           variant="contained"
           color="success"
           onClick={() => setModalOpen("add")}
+<<<<<<< HEAD
           sx={{
             alignSelf: "flex-start",
             marginBottom: "2rem",
@@ -161,6 +162,9 @@ export default function Contatos() {
             height: 50,
             fontSize: "1.6rem",
           }}
+=======
+          sx={{ alignSelf: "flex-start", marginBottom: "2rem" }}
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
         >
           Adicionar
         </Button>
@@ -241,7 +245,11 @@ export default function Contatos() {
 
       {modalDelete && (
         <div className="modal-delete">
+<<<<<<< HEAD
           <div className="container-modal container-modaldelete">
+=======
+          <div className="container-modaldelete">
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
             <img
               className="btn-fechar"
               src="./assets/btn-fechar.png"
@@ -251,7 +259,11 @@ export default function Contatos() {
 
             <h1 className="modal-title delete-title">Confirma a exclusão?</h1>
 
+<<<<<<< HEAD
             <Typography variant="body1" gutterBottom sx={{ fontSize: 16 }}>
+=======
+            <Typography variant="body1" gutterBottom>
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
               Deseja excluir o contato, {modalDelete.nome}?
             </Typography>
 
@@ -273,7 +285,10 @@ export default function Contatos() {
               variant="contained"
               color="error"
               className="btn_modal btn-limpar"
+<<<<<<< HEAD
               onClick={() => setModalDelete(false)}
+=======
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
             >
               Cancelar
             </Button>

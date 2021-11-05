@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { useHistory } from "react-router-dom";
+<<<<<<< HEAD
 import { useAuth } from "../Global/useGlobal";
 
 export default function CustomNavBar() {
@@ -30,6 +31,21 @@ export default function CustomNavBar() {
           </Typography>
           <Button color="inherit" onClick={() => handleDeslogar()}>
             <ExitToAppIcon sx={{ height: 28, width: 28 }} />
+=======
+
+export default function CustomNavBar() {
+  const history = useHistory();
+
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar sx={{ backgroundColor: "#134563" }}>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            KONTACTS
+          </Typography>
+          <Button color="inherit" onClick={() => history.push("/")}>
+            <ExitToAppIcon />
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
           </Button>
         </Toolbar>
       </AppBar>

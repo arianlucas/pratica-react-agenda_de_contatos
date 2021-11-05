@@ -14,11 +14,16 @@ export default function CustomAlert({ infos }) {
         }}
         spacing={2}
       >
+<<<<<<< HEAD
         <Alert
           severity={infos.typealert === "error" ? "error" : "success"}
           sx={{ fontSize: 16 }}
         >
           <AlertTitle sx={{ fontSize: 18 }}>
+=======
+        <Alert severity={infos.typealert === "error" ? "error" : "success"}>
+          <AlertTitle>
+>>>>>>> 725c4a0cce420f66a7e303623d770878e80e7110
             {infos.typealert === "error" ? "Erro" : "Successo"}
           </AlertTitle>
           <strong>{infos.data}!</strong>
