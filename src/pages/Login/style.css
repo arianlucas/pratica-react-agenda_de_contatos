@@ -59,6 +59,10 @@ h5.title-login {
     width: 100%;
   }
 
+  .box-titles {
+    align-items: center;
+  }
+
   div.outlined-basic,
   button.btn-action {
     min-width: 50vw;

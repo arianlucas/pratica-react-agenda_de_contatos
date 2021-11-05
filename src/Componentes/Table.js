@@ -22,7 +22,7 @@ export default function BasicTable() {
   return (
     <TableContainer
       component={Paper}
-      sx={{ width: 956, alignSelf: "flex-start", marginBottom: "2rem" }}
+      sx={{ alignSelf: "flex-start", marginBottom: "2rem" }}
     >
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>

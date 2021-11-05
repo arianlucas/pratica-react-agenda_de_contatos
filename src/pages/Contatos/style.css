@@ -106,3 +106,27 @@ button.btn_modal {
 .error {
   border: 1px solid #da6868;
 }
+
+@media (max-width: 425px) {
+  .container-modal {
+    width: 40rem;
+  }
+
+  div.MuiPaper-root {
+    width: 75vw;
+  }
+}
+
+@media (max-width: 375px) {
+  button.MuiButton-root {
+    width: 90%;
+  }
+
+  .container-modal {
+    width: 35rem;
+  }
+
+  .inputs-modal {
+    width: 100%;
+  }
+}
