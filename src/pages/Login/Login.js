@@ -75,7 +75,7 @@ export default function Login() {
   return (
     <div className="Login">
       <div className="left left_login">
-        <img src="./assets/imagem-esquerda.png" alt="Banner de Login" />
+        <img src="./public/assets/imagem-esquerda.png" alt="Banner de Login" />
       </div>
       <div className="right right_login">
         <Box className="box-form_login">
