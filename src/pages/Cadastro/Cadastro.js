@@ -156,10 +156,7 @@ export default function Cadastro() {
         </Box>
       </div>
       <div className="right right_cadastro">
-        <img
-          src="./public/assets/imagem-direita.png"
-          alt="Banner de Cadastro"
-        />
+        <img src="./assets/imagem-direita.png" alt="Banner de Cadastro" />
       </div>
     </div>
   );

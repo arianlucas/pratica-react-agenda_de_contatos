@@ -13,7 +13,7 @@ function App() {
   return (
     <UseContext.Provider value={valuesProv}>
       <div className="App">
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router>
           <Route path="/" exact>
             <Login />
           </Route>
