@@ -11,7 +11,7 @@ A aplicação trata-se de uma agenda pessoal, onde você pode fazer um cadastro 
 
 Para desenvolver, nesse repositório temos um arquivo chamado `aula-pratica.fig`, ou você pode acessar o arquivo figma nesse [link](https://www.figma.com/file/yN40UvrQmv4i8V4uHs94Yn/Aula-Prática?node-id=0%3A1).
 
-Você pode ver e testar a aplicação nesse link => [https://cubosagenda.netlify.app/](https://cubosagenda.netlify.app/)
+Você pode ver e testar a aplicação nesse link => [https://agenda-contatos-arian.netlify.app](https://agenda-contatos-arian.netlify.app)
 
 --- 
 
